@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+.main .search {
+  text-align: center;
+  padding: 1rem;
+}
+
+.main input {
+  max-width: 250px;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+  background: rgba(0, 0, 0, 0.2);
+  border: 2px solid rgb(194, 194, 194);
+  border-radius: 5px;
+  color: aliceblue;
+}
+
+::placeholder {
+  color: rgb(194, 194, 194);
+}
+
+.main {
+  padding: 2rem 0;
+  position: relative;
+  color: white;
+}
+
+.main::before {
+  content: "";
+  background-image: url("./assets/weather.jpg");
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.articleFigure {
+  overflow: hidden;
+  border-radius: 5px;
+}
+.articleImg {
+  cursor: pointer;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  transition: transform 0.7s ease-in-out;
+}
+
+.articleImg:hover {
+  transform: scale(1.05);
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main .top {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.temp {
+  text-align: center;
+}
+
+.main .desc {
+  position: relative;
+  text-align: end;
+}
+
+.main .desc p {
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(100, 177, 187);
+}
+
+.main .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1rem;
+  background-color: rgba(247, 247, 247, 0.08);
+  border-radius: 10px;
+}
+
+.metric {
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 420px) {
+  .main .bottom {
+    flex-direction: row;
+  }
+}
